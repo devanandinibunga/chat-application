@@ -1,0 +1,7 @@
+.nav-side-container{
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  gap: 20px;
+  padding: 1rem;
+}
