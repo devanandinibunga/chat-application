@@ -81,7 +81,6 @@ app.get("/myProfile", middleware, async (req, res) => {
 //Chat api's -- chat application continued using login
 app.post("/addMsg", middleware, async (req, res) => {
   const { text } = req.body;
-  console.log(req.body);
   try {
     let exist = await RegistrationSchema.findById(req.user.id);
     let msgData = new chat({
