@@ -15,7 +15,7 @@ export const MyProfile = () => {
       return navigate("/login");
     }
     axios
-      .get("http://localhost:4000/MyProfile", {
+      .get(process.env.REACT_APP_SERVER_URL +"/MyProfile", {
         headers: {
           "x-token": token,
         },
@@ -23,7 +23,7 @@ export const MyProfile = () => {
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:4000/getMsg", {
+      .get(process.env.REACT_APP_SERVER_URL + "/getMsg", {
         headers: {
           "x-token": token,
         },
@@ -36,7 +36,7 @@ export const MyProfile = () => {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:4000/addMsg",
+        process.env.REACT_APP_SERVER_URL + "/addMsg",
         { text: msg },
         {
           headers: {

@@ -3,7 +3,6 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { store } from "../App";
 
-
 export const Login = () => {
   const [token, setToken] = useContext(store);
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/login", data)
+      .post(process.env.REACT_APP_SERVER_URL + "/login", data)
       .then((res) => setToken(res.data.token));
   };
   if (token) {

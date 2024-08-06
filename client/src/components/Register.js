@@ -14,9 +14,10 @@ export const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/register", data)
+      .post(process.env.REACT_APP_SERVER_URL + "/register", data)
       .then((res) => alert(res.data));
   };
+  console.log(process.env.REACT_APP_SERVER_URL);
   return (
     <div>
       <center>
