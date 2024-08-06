@@ -20,6 +20,9 @@ mongoose
   .then(() => console.log("DB connected"));
 
 //Login authentication api's
+app.get("/", (req, res) => {
+  res.send("Hello Nandini");
+});
 app.post("/register", async (req, res) => {
   const { username, email, password, confirmpassword } = req.body;
   try {
