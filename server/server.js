@@ -8,11 +8,7 @@ const RegistrationSchema = require("./model/loginmodel");
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "*",
-  }),
-);
+app.use(cors());
 mongoose
   .connect(
     "mongodb+srv://devanandini205:nandini402@cluster0.vllqbgr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
