@@ -17,7 +17,6 @@ export const Register = () => {
       .post(process.env.REACT_APP_SERVER_URL + "/register", data)
       .then((res) => alert(res.data));
   };
-  console.log(process.env.REACT_APP_SERVER_URL);
   return (
     <div>
       <center>
